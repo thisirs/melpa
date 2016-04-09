@@ -1364,7 +1364,7 @@ Returns the archive entry for the package."
   "Build archive for package PKG, ignoring any errors."
   (interactive (list (package-build--package-name-completing-read)))
   (let* ((debug-on-error t)
-         (debug-on-signal t)
+         ;; (debug-on-signal t)
          (package-build--debugger-return nil)
          (debugger (lambda (&rest args)
                      (setq package-build--debugger-return (with-output-to-string
